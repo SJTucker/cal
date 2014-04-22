@@ -39,7 +39,6 @@ class Month
     @total_days = TOTAL_DAYS[month-1]
     @header = "#{@year}".center(60)
     @header0 = "#{@month}".center(20)
-    @header1 = "#{@month} #{@year}".center(20)
     @header2 = "Su Mo Tu We Th Fr Sa"
 
     if (month == 02) and (year % 4 == 0)
@@ -48,8 +47,9 @@ class Month
   end
 
   def print_header
-    @header = "#{@month} #{@year}".center(20)
-    @header += "\nSu Mo Tu We Th Fr Sa\n"
+    header = "#{@month} #{@year}".center(20)
+    header += "\nSu Mo Tu We Th Fr Sa\n"
+    puts header
   end
 
   def create_month

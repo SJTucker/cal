@@ -77,7 +77,3 @@ class Year
     end
   end
 end
-
-year = Year.new(ARGV[0].to_i)
-year.create_month_array
-year.print_month
